@@ -1,0 +1,19 @@
+{% macro display_new_sources(sources_outcome) %}
+    <div class="container-fluid">
+        <div class="card-columns">
+            {% for news in sources_outcome %}
+            <div class="card">
+                <div class="card-header">
+                    {{news.name}}
+                </div>
+                <div class="card-body">
+                    <p>
+                        {{news.description}}
+                    </p>
+                    <a href="{{news.url}}"><button class="btb btn-sm btn-info">Visit {{news.name}}</button></a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endmacro %}

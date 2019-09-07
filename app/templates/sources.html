@@ -1,14 +1,11 @@
 {% extends 'base.html'%}
-<!-- {% import 'news_macros.html' as macro%} -->
+{% import 'news_macros.html' as macro %}
 {% block content %}
-<div class="container">
+<div class="container-fluid">
 
     <h3>General News</h3>
-        <ul>
-           {% for busin in general %}
-               <li>{{ busin.name}}</li>
-           {% endfor %}
-        </ul>
+
+        {{ macro.display_new_sources(general) }}
 
     <div class="row">
         <h3 class="text-center"> Business News</h3>
