@@ -14,33 +14,35 @@ def get_sources(category):
 
     url = app.config['NEWS_API_BASE_URL']
     
-    articles_url = url.format(category, api_key)
+    sources_url = url.format(category, api_key)
 
-    with urllib.request.urlopen(articles_url) as url:
+    with urllib.request.urlopen(sources_url) as url:
         sources_data = url.read()
         response = json.loads(sources_data)
 
         sources_outcome = None
+
         if response['sources']:
             sources_outcome_items = response['sources']
             sources_outcome = process_new_sources(sources_outcome_items)
     return sources_outcome
 
-def process_new_sources(all_sources):
+def process_new_sources(sources_list):
     sources_outcome = []
-    for onesource in all_sources:
-        id = onesource.get("id")
-        name = onesource.get("name")
-        description = onesource.get("description")
-        url = onesource.get("url")
-        category = onesource.get("category")
-        language = onesource.get("language")
-        country = onesource.get("country")
 
-        new_source = Sources(id, name, description, url, category, country)
+    for one_source in sources_list:
+        id = one_source.get("id")
+        name = one_source.get("name")
+        description = one_source.get("description")
+        url = one_source.get("url")
+        category = one_source.get("category")
+        language = one_source.get("language")
+        country = one_source.get("country")
+        
+        new_source = Sources(id,name,description,url,category,language,country)
         sources_outcome.append(new_source)
-    print(new_source)
-    return new_source
+    
+    return sources_outcome
 
 
 

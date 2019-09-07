@@ -1,4 +1,31 @@
 {% extends 'base.html'%}
+<!-- {% import 'news_macros.html' as macro%} -->
 {% block content %}
-<h1>Welcome to news bulettins</h1>
+<div class="container">
+
+    <h3>General News</h3>
+        <ul>
+           {% for busin in general %}
+               <li>{{ busin.name}}</li>
+           {% endfor %}
+        </ul>
+
+    <div class="row">
+        <h3 class="text-center"> Business News</h3>
+        <ul>
+            {% for busin in business %}
+                <li>{{ busin.name}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="row">
+        <h3 class="text-center"> Sports news </h3>
+        <ul>
+            {% for busin in sports %}
+                <li>{{ busin.name}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
 {% endblock %}
