@@ -3,25 +3,17 @@
 {% block content %}
 <div class="container-fluid">
 
-    <h3>General News</h3>
+    <h3 class="text-center font-weight-bold">General News</h3>
 
         {{ macro.display_new_sources(general) }}
 
     <div class="row">
-        <h3 class="text-center"> Business News</h3>
-        <ul>
-            {% for busin in business %}
-                <li>{{ busin.name}}</li>
-            {% endfor %}
-        </ul>
+        <h3 class="text-center font-weight-bold"> Business News</h3>
+        {{ macro.display_new_sources(business) }}
     </div>
     <div class="row">
-        <h3 class="text-center"> Sports news </h3>
-        <ul>
-            {% for busin in sports %}
-                <li>{{ busin.name}}</li>
-            {% endfor %}
-        </ul>
+        <h3 class="text-center font-weight-bold"> Sports news </h3>
+        {{ macro.display_new_sources(sports) }}
     </div>
 </div>
 

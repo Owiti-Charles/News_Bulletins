@@ -11,3 +11,11 @@ def HomePage():
     business_news = get_sources("business")
     sports_news = get_sources("sports")
     return render_template('sources.html',general=general_news,business=business_news,sports=sports_news )
+
+@app.route('/News-Articles')
+def NewsArticles():
+    """
+    View that would return news articles
+     
+    """
+    return render_template('articles.html')
