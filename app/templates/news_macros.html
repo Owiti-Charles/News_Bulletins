@@ -17,4 +17,23 @@
         </div>
     </div>
 {% endmacro %}
-{% %}
+{% macro display_new_articles(articles_outcome) %}
+<div class="container">
+    <div class="card-columns">
+        {% for article in articles_outcome %}
+            <div class="card">
+                <div class="card-header">{{article.title}}</div>
+                <div class="card-body">
+                    <img src="{{article.urlToImage}}" alt="{{article.title}}" class="card-img">
+                    <p>
+                        {{article.description}}
+                    </p>
+                    <p class="text-disabled">Posted: {{article.publishedAt}}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+{% endmacro %}

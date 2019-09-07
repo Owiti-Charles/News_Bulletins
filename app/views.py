@@ -19,4 +19,4 @@ def NewsArticles():
      
     """
     health_articles = get_articles('health')
-    return render_template('articles.html')
+    return render_template('articles.html',health=health_articles)

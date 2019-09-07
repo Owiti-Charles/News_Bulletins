@@ -72,10 +72,10 @@ def process_new_articles(articles_list):
         description = one_article.get("description")
         title = one_article.get("title")
         url = one_article.get("url")
-        image_url = one_article.get("image_url")
-        publish_time = one_article.get("publish_time")
+        urlToImage = one_article.get("urlToImage")
+        publishedAt = one_article.get("publishedAt")
         
-        new_article = Articles(source, author, title, description, url, image_url, publish_time)
+        new_article = Articles(source, author, title, description, url, urlToImage, publishedAt)
         articles_outcome.append(new_article)
     
     return articles_outcome

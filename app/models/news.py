@@ -4,15 +4,15 @@ class Articles:
     Articles class to define Article Objects
     
     """
-    def __init__(self, source, author, title, description, url, image_url, publish_time):
+    def __init__(self, source, author, title, description, url, urlToImage, publishedAt):
 
         self.source = source
         self.author = author
         self.title = title
         self.description = description
         self.url = url
-        self.image_url = image_url
-        self.publish_time = publish_time
+        self.urlToImage= urlToImage
+        self.publishedAt = publishedAt
 
 class Sources:
     '''
