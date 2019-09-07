@@ -52,7 +52,7 @@ def get_articles(article):
     url = app.config['NEWS_ARTICLES_APL_URL']
 
     articles_url = url.format(article,api_key)
-    with urllib.request.urlopen(articles_urll) as url:
+    with urllib.request.urlopen(articles_url) as url:
         articles_data = url.read()
         articles_response = json.loads(articles_data)
 
@@ -76,7 +76,7 @@ def process_new_articles(articles_list):
         publish_time = one_article.get("publish_time")
         
         new_article = Articles(source, author, title, description, url, image_url, publish_time)
-        articles_outcome.append(new_source)
+        articles_outcome.append(new_article)
     
     return articles_outcome
 

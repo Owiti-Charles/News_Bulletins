@@ -1,6 +1,6 @@
 from flask import render_template
 from app import app
-from .news_requests import get_sources
+from .news_requests import get_sources,get_articles
 
 @app.route('/')
 def HomePage():
@@ -18,4 +18,5 @@ def NewsArticles():
     View that would return news articles
      
     """
+    health_articles = get_articles('health')
     return render_template('articles.html')
