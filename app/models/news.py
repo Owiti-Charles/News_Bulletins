@@ -13,8 +13,8 @@ class Articles:
         self.url = url
         self.image_url = image_url
         self.publish_time = publish_time
-        
-def class Sources:
+
+class Sources:
     '''
     Sources class that defines each source object
     '''
