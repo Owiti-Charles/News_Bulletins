@@ -7,20 +7,19 @@
 {% endblock %}
 
 {% block content %}
-<div class="container-fluid" style="background-image:url()">
-
-    <h3 class="text-center font-weight-bold" style="margin-top:6%;margin-bottom:10px">General News</h3>
-
+<div class="container-fluid" style="background-image:url('https://raw.githubusercontent.com/Owiti-Charles/News_Bulletins/master/app/templates/image/bg%20.jpg');background-attachment: fixed;">
+    <div class="overlay" style="background-color: rgba(39, 42, 42, 0.884);width: 100%;padding-top: 1%">
+        <h2 class="text-center font-weight-bold" style="margin-top:5%;margin-bottom:10px;color: white;font-family: 'ABeeZee', sans-serif;">General News</h2>
         {{ macro.display_new_sources(general) }}
-
-    <div class="row">
-        <h3 class="text-center font-weight-bold" style="margin-top:3%;margin-bottom:10px;margin-left: 40%"> Business News</h3>
+ 
+        <h2 class="text-center font-weight-bold" style="margin-top:3%;margin-bottom:16px;color: white;font-family: 'ABeeZee', sans-serif;"> Business News</h2>
         {{ macro.display_new_sources(business) }}
-    </div>
-    <div class="row">
-        <h3 class="text-center font-weight-bold" style="margin-top:3%;margin-bottom:10px;margin-left: 42%"> Sports news </h3>
+        <h2 class="text-center font-weight-bold" style="margin-top:3%;margin-bottom:16px; color: white;font-family: 'ABeeZee', sans-serif;"> Sports news </h2>
         {{ macro.display_new_sources(sports) }}
+
+
     </div>
+    
 </div>
 
 {% endblock %}

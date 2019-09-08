@@ -7,14 +7,13 @@
 {% endblock %}
 
 {% block content %}
-<div class="container">
-    <div class="row">
-        <h3 class="text-center" style="margin-top:6%;">Health News Articles</h3>
-        {{macro.display_new_articles(health)}}
-    </div>
-    <div class="row">
-        <h3 class="text-center">Technology Articles</h3>
+<div class="container-fluid"style="background-image:url('https://raw.githubusercontent.com/Owiti-Charles/News_Bulletins/master/app/templates/image/bg%20.jpg');background-attachment: fixed;">
+    <div class="overlay container-fluid" style="background-color: rgba(39, 42, 42, 0.884);width: 100%;padding-top:20px">    
+        <h2 class="text-center" style="margin-top:5%;color: white;font-family: 'ABeeZee', sans-serif;">Technology Articles</h2>
         {{macro.display_new_articles(tech)}}
+
+        <h2 class="text-center" style="margin-top:3%; color: white;font-family: 'ABeeZee', sans-serif;">Health News Articles</h2>
+        {{macro.display_new_articles(health)}}
     </div>
 </div>
 {% endblock %}

@@ -2,12 +2,12 @@
     <div class="container-fluid">
         <div class="card-columns">
             {% for news in sources_outcome %}
-            <div class="card">
-                <div class="card-header source">
-                    {{news.name}}
+            <div class="card " style="background-color: rgba(248, 248, 248, 0.89)">
+                <div class="card-header" style="font-family: 'Livvic', sans-serif;">
+                    <h4>{{news.name}}</h4>
                 </div>
                 <div class="card-body">
-                    <p>
+                    <p style="font-family: 'Handlee', cursive;font-size:18px">
                         {{news.description}}
                     </p>
                     <a href="{{news.url}}"><button class="btb btn-sm btn-outline-info">Visit {{news.name}}</button></a>
@@ -22,13 +22,16 @@
     <div class="card-columns">
         {% for article in articles_outcome %}
             <div class="card">
-                <div class="card-header">{{article.title}}</div>
+                <div class="card-header" style="font-family: 'Chilanka', cursive; font-weight: bold">
+                    <h4>{{article.title}}</h4>
+                </div>
                 <div class="card-body">
                     <img src="{{article.urlToImage}}" alt="{{article.title}}" class="card-img">
-                    <p>
+                    <hr>
+                    <p style="font-family: 'Handlee', cursive;font-size:18px">
                         {{article.description}}
                     </p>
-                    <p class="disabled">Posted: {{article.publishedAt | truncate(13)}} By: {{article.author | truncate(16)}} </p>
+                    <p disabled>Posted: {{article.publishedAt | truncate(13)}} By: {{article.author | truncate(16)}} </p>
                 </div>
                 <div class="card-footer">
                      <a href="{{article.url}}"><button class="btn btn-sm btn-outline-success">Read More</button></a> 

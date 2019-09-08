@@ -1,6 +1,8 @@
 .source{
-    /* color: brown; */
+    color: rgb(0, 0, 0);
+    font-weight: bold;
     font-family: 'Chilanka', cursive;
-    font-size: 14px;
-    background-color: #aecde4;
+    /* font-size: 14px; */
+
+    /* background-color: #aecde4; */
 }
