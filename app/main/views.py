@@ -1,8 +1,9 @@
-from flask import render_template
-from app import app
-from .news_requests import get_sources,get_articles
+from flask import render_template,redirect,request,url_for
+from . import main
+# from app import app
+from ..news_requests import get_sources,get_articles
 
-@app.route('/')
+@main.route('/')
 def HomePage():
     """
     Views thats renders the home page
@@ -12,11 +13,12 @@ def HomePage():
     sports_news = get_sources("sports")
     return render_template('sources.html',general=general_news,business=business_news,sports=sports_news )
 
-@app.route('/News-Articles')
+@main.route('/News-Articles')
 def NewsArticles():
     """
     View that would return news articles
      
     """
     health_articles = get_articles('health')
-    return render_template('articles.html',health=health_articles)
+    education_articles = get_articles('technology')
+    return render_template('articles.html',health=health_articles, tech =education_articles)
