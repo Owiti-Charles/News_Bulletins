@@ -13,7 +13,7 @@ Click [Link](https://news-bulletins.herokuapp.com/) to visit the site
 
 ## Screenshot
 
-<img src="" width="900px" height="440px">
+<img src="https://raw.githubusercontent.com/Owiti-Charles/News_Bulletins/master/app/templates/image/screenshot.png" width="900px" height="440px">
 
 ## User Story
 
