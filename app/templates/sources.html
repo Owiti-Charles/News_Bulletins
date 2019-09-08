@@ -1,18 +1,24 @@
 {% extends 'base.html'%}
 {% import 'news_macros.html' as macro %}
-{% block content %}
-<div class="container-fluid">
 
-    <h3 class="text-center font-weight-bold">General News</h3>
+{% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid" style="background-image:url()">
+
+    <h3 class="text-center font-weight-bold" style="margin-top:6%;margin-bottom:10px">General News</h3>
 
         {{ macro.display_new_sources(general) }}
 
     <div class="row">
-        <h3 class="text-center font-weight-bold"> Business News</h3>
+        <h3 class="text-center font-weight-bold" style="margin-top:3%;margin-bottom:10px;margin-left: 40%"> Business News</h3>
         {{ macro.display_new_sources(business) }}
     </div>
     <div class="row">
-        <h3 class="text-center font-weight-bold"> Sports news </h3>
+        <h3 class="text-center font-weight-bold" style="margin-top:3%;margin-bottom:10px;margin-left: 42%"> Sports news </h3>
         {{ macro.display_new_sources(sports) }}
     </div>
 </div>
