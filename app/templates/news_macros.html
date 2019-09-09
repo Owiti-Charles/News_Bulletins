@@ -43,3 +43,26 @@
 </div>
 
 {% endmacro %}
+
+{% macro display_Source_articles(source_articles) %}
+<div class="container">
+    <div class="row">
+        {% for art in source_articles %}
+            <div class="col-sm-4">
+                <div class="card">
+                    <img src="{{art.urlToImage}}" alt="{{art.title}}" class="card-img">
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="card">
+                    <div class="card-header">{{art.title}}</div>
+                    <div class="card-body">
+                        <p>{{art.description}}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endmacro %}

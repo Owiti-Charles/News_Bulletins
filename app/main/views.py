@@ -14,10 +14,12 @@ def HomePage():
     return render_template('sources.html',general=general_news,business=business_news,sports=sports_news )
 
 
-@main.route('/articles/<source>')
-def sourceArticles(source):
-    all_articles = articles_source(source)
-    return render_template('sourcearticles.html', all_articles= all_articles)
+@main.route('/articles/<id>')
+def sourceArticles(id):
+    all_articles = articles_source(id)
+    print(all_articles)
+    source = id
+    return render_template('sourcearticles.html', articles = all_articles, source = source)
 
 
 @main.route('/News-Articles')
